@@ -12,25 +12,27 @@
 
 // Input: nums = [-7,-3,2,3,11]
 // Output: [4,9,9,49,121]
- 
+
+
+
 
 import java.util.*;
-public class rotatearray {
-    public static void rotate(int[] nums, int k) {
-        for(int i=0; i<k; i++){
-            for(int j=nums.length; j==0; j--){
-                System.out.print(nums[j]);
-            }
-        }
-    }
+public class ArraySquare{
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int d = sc.nextInt();
-        int [] arr = new int[a];
-        for(int p=0; p<a; p++){
-            arr[p] = sc.nextInt();
-        }
-        rotate(arr,d);
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int nums [] = new int[n];
+       for(int i=0; i<n; i++){
+        nums[i] = sc.nextInt();
+       }
+       for(int i=0; i<nums.length; i++){
+        nums[i] = nums[i] * nums[i];
+      }
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+       
     }
 }
+
+
+
